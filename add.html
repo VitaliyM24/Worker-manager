@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Добавить сотрудника</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/libs.min.css">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body>
+	<section class="add-user container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-md-8 add-user_block">
+				<div class="row align-items-center">
+					<div class="col-md-10">
+						<h2>Добавление сотрудника</h2>
+						<small class="text-muted">Заполните данные для добавление сотрудника в базу</small>
+					</div>
+					<div class="col-md-2 clearfix">
+						<a href="index.html" class="btn btn-outline-danger btn-sm float-right">Назад</a>
+					</div>
+				</div>
+				<hr>
+				<form class="">
+					<div class="row">
+						<div class="form-group col-md-4">
+							<label>Прiзвище</label>
+							<input type="text" name="surname" class="form-control" placeholder="Иванов">
+						</div>
+						<div class="form-group col-md-4">
+							<label>Iм'я</label>
+							<input type="text" name="name" class="form-control" placeholder="Иван">
+						</div>
+
+						<div class="form-group col-md-4">
+							<label>По батьковi</label>
+							<input type="text" name="middle-name" class="form-control" placeholder="Иванович">
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="form-group col-md-5">
+							<label>Стать</label>
+							<div class="">
+							  <label class="custom-control custom-radio">
+							    <input id="male" name="gender" type="radio" class="custom-control-input">
+							    <span class="custom-control-indicator"></span>
+							    <span class="custom-control-description">Мужська</span>
+							  </label>
+							  <label class="custom-control custom-radio">
+							    <input id="female" name="gender" type="radio" class="custom-control-input">
+							    <span class="custom-control-indicator"></span>
+							    <span class="custom-control-description">Женьска</span>
+							  </label>
+							</div>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="form-group col-md-8">
+							<label>Iдентифiкацiйний код</label>
+							<div class="input-group">
+						      <span class="input-group-addon">
+						       <label class="custom-control custom-checkbox">
+							    <input type="checkbox" class="custom-control-input">
+							    <span class="custom-control-indicator"></span>
+							  </label>
+						      </span>
+						      <input type="text" class="form-control" name="ident-code" placeholder="111111111111">
+						    </div>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="form-group col-lg-6 col-xl-4">
+							<label>Основна професiя</label>
+							<input type="text" name="main-proff" class="form-control" placeholder="Командир">
+						</div>
+						<div class="form-group col-lg-6 col-xl-4">
+							<label>Рiк початку роботи в ОНУ</label>
+							<input type="date" name="work-date-start" class="form-control">
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="form-group col-lg-6 col-xl-4">
+							<label>Мобiльний номер</label>
+							<div class="input-group">
+						      <span class="input-group-addon">
+						       <label class="custom-control custom-checkbox">
+							    <input type="checkbox" class="custom-control-input">
+							    <span class="custom-control-indicator"></span>
+							  </label>
+						      </span>
+						      <input type="text" name="mobile-phone" class="form-control" placeholder="+38 (000) 000-00-00">
+						    </div>
+						</div>
+						<div class="form-group col-lg-6 col-xl-4">
+							<label>Мicкий номер</label>
+							<div class="input-group">
+						      <span class="input-group-addon">
+						       <label class="custom-control custom-checkbox">
+							    <input type="checkbox" class="custom-control-input">
+							    <span class="custom-control-indicator"></span>
+							  </label>
+						      </span>
+						      <input type="text" name="home-phone" class="form-control" placeholder="00-00-00">
+						    </div>
+						</div>
+					</div>
+					
+					<hr>
+
+					<fieldset class="form-group">
+					    <legend>Вид проживания</legend>
+
+					    <label class="custom-control custom-checkbox">
+						  <input type="checkbox" id="private-house" class="custom-control-input dinamic">
+						  <span class="custom-control-indicator"></span>
+						  <span class="custom-control-description">Приватне житло</span>
+						</label>
+						<label class="custom-control custom-checkbox">
+						  <input type="checkbox" id="vidomche" class="custom-control-input dinamic">
+						  <span class="custom-control-indicator"></span>
+						  <span class="custom-control-description">Вiдомче</span>
+						</label>
+						<label class="custom-control custom-checkbox">
+						  <input type="checkbox" id="from-university" class="custom-control-input dinamic">
+						  <span class="custom-control-indicator"></span>
+						  <span class="custom-control-description">Вiд унiверситету</span>
+						</label>
+						<label class="custom-control custom-checkbox">
+						  <input type="checkbox" id="hostel" class="custom-control-input dinamic">
+						  <span class="custom-control-indicator"></span>
+						  <span class="custom-control-description">Гуртожиток</span>
+						</label>
+
+				  	</fieldset>
+
+				  	<hr>
+
+				  	<fieldset class="form-group private-house invisible">
+					    <legend>Приватне житло</legend>
+					    <div class="row">
+						   	<div class="form-group col-md-3">
+								<label>Мiсто</label>
+								<input type="input" name="private-house-city" class="form-control">
+							</div>
+
+							<div class="form-group col-md-3">
+								<label>Вулиця</label>
+								<input type="input" name="private-house-street" class="form-control">
+							</div>
+
+							<div class="form-group col-md-3">
+								<label>Номер дому</label>
+								<input type="input" name="private-house-number" class="form-control">
+							</div>
+
+							<div class="form-group col-md-3">
+								<label>Номер квартири</label>
+								<input type="input" name="private-house-flat" class="form-control">
+							</div>
+					    </div>
+					   	<hr>
+				  	</fieldset>
+				  	
+				  	<fieldset class="form-group vidomche invisible">
+					    <legend>Вiдомче</legend>
+					    <div class="row">
+
+							<div class="form-group col-lg-4 col-xl-3">
+						   		<label>Адреса вiдомчого</label>
+						   		<select class="custom-select" name="vidomche-adress">
+								  <option selected>Open this select menu</option>
+								  <option value="1">One</option>
+								  <option value="2">Two</option>
+								  <option value="3">Three</option>
+								</select>
+						   	</div>
+
+							<div class="form-group col-lg-4 col-xl-3">
+								<label>Номер кiмнати</label>
+								<input type="input" name="vidomche-flat-number" class="form-control">
+							</div>
+							
+					    </div>
+					   	<hr>
+				  	</fieldset>
+				  	
+				  	<fieldset class="form-group from-university invisible">
+					    <legend>Вiд унiверситету</legend>
+					    <div class="row">
+
+							<div class="form-group col-md-3">
+								<label>Мiсто</label>
+								<input type="input" name="from-university-city" class="form-control">
+							</div>
+
+							<div class="form-group col-md-3">
+								<label>Вулиця</label>
+								<input type="input" name="from-university-street" class="form-control">
+							</div>
+
+							<div class="form-group col-md-3">
+								<label>Номер дому</label>
+								<input type="input" name="from-university-house-number" class="form-control">
+							</div>
+
+							<div class="form-group col-md-3">
+								<label>Номер квартири</label>
+								<input type="input" name="from-university-flat-number" class="form-control">
+							</div>
+
+							<div class="form-group col-md-3">
+								<label>Дата розподiлу</label>
+								<input type="date" name="from-university-date" class="form-control">
+							</div>
+							
+					    </div>
+					   	<hr>
+				  	</fieldset>
+				  	
+				  	<fieldset class="form-group hostel invisible">
+					    <legend>Гуртожиток</legend>
+					    <div class="row">
+
+							<div class="form-group col-lg-4 col-xl-3">
+						   		<label>Номер гуртожитку</label>
+						   		<select class="custom-select" name="hoset-number">
+								  <option selected>Open this select menu</option>
+								  <option value="1">One</option>
+								  <option value="2">Two</option>
+								  <option value="3">Three</option>
+								</select>
+						   	</div>
+
+							<div class="form-group col-lg-4 col-xl-3">
+								<label>Номер кiмнати</label>
+								<input type="input" name="hostel-flat-number" class="form-control">
+							</div>
+							
+					    </div>
+					   	<hr>
+				  	</fieldset>
+				  	
+				  	<fieldset class="form-group">
+				  		<legend>Заслуги</legend>
+
+				  		<label class="custom-control custom-checkbox">
+						  <input type="checkbox" id="study-award" class="custom-control-input dinamic">
+						  <span class="custom-control-indicator"></span>
+						  <span class="custom-control-description">Учений ступiнь/Наукове звання</span>
+						</label>
+						<label class="custom-control custom-checkbox">
+						  <input type="checkbox" id="publicy-level" class="custom-control-input dinamic">
+						  <span class="custom-control-indicator"></span>
+						  <span class="custom-control-description">Громадська посада</span>
+						</label>
+						<label class="custom-control custom-checkbox">
+						  <input type="checkbox"  id="privilege" class="custom-control-input dinamic">
+						  <span class="custom-control-indicator"></span>
+						  <span class="custom-control-description">Пiльга</span>
+						</label>
+						
+				  	</fieldset>
+
+				  	<hr>
+					<fieldset class="form-group award publicy-level invisible">
+					    <legend>Громадська посада</legend>
+					    <div class="row">
+
+							<div class="form-group col-lg-4 col-xl-3">
+						   		<label>Назва посади</label>
+						   		<select class="custom-select" name="publicy-level-name">
+								  <option selected>Open this select menu</option>
+								  <option value="1">One</option>
+								  <option value="2">Two</option>
+								  <option value="3">Three</option>
+								</select>
+						   	</div>
+
+							<div class="form-group col-lg-4 col-xl-3">
+								<label>Дата початку</label>
+								<input type="date" name="publicy-level-date-start" class="form-control">
+							</div>
+
+							<div class="form-group col-lg-4 col-xl-3">
+								<label>Дата Закiнчення</label>
+								<input type="date" name="private-house-date-end" class="form-control">
+							</div>
+							
+					    </div>
+					   	<hr>
+				  	</fieldset>
+				  	
+				  	<fieldset class="form-group award study-award invisible">
+					    <legend>Учений ступiнь/Наукове звання</legend>
+					    <div class="row">
+
+							<div class="form-group col-lg-4 col-xl-3">
+						   		<label>Учений ступiнь</label>
+						   		<select class="custom-select" name="study-award-level">
+								  <option selected>Open this select menu</option>
+								  <option value="1">One</option>
+								  <option value="2">Two</option>
+								  <option value="3">Three</option>
+								</select>
+						   	</div>
+
+						   	<div class="form-group col-lg-4 col-xl-3">
+						   		<label>Наукове звання</label>
+						   		<select class="custom-select" name="study-award-rank">
+								  <option selected>Open this select menu</option>
+								  <option value="1">One</option>
+								  <option value="2">Two</option>
+								  <option value="3">Three</option>
+								</select>
+						   	</div>
+
+					    </div>
+					    <hr>
+				  	</fieldset>
+				  	
+				  	<fieldset class="form-group award privilege invisible">
+					    <legend>Пiльга</legend>
+					    <div class="row">
+
+							<div class="form-group col-md-3">
+						   		<label>Назва пiльги</label>
+						   		<select class="custom-select" name="privilege-name">
+								  <option selected>Open this select menu</option>
+								  <option value="1">One</option>
+								  <option value="2">Two</option>
+								  <option value="3">Three</option>
+								</select>
+						   	</div>
+
+							<div class="form-group col-lg-4 col-xl-3">
+								<label>Дата початку пiльги</label>
+								<input type="date" name="privilege-date-start" class="form-control">
+							</div>
+
+							<div class="form-group col-lg-4 col-xl-3">
+								<label>Дата закiнчення пiльги</label>
+								<input type="date" name="privilege-date-end" class="form-control">
+							</div>
+							
+					    </div>
+					   	<hr>
+				  	</fieldset>
+
+					<fieldset class="form-group">
+					    <legend>Освiта</legend>
+					    <div class="row">
+					    	<div class="form-group col-lg-4 col-xl-3">
+					   		<label>Рiвень освiти</label><br>
+					   		<select class="custom-select" name="education-level">
+							  <option selected>Open this select menu</option>
+							  <option value="1">One</option>
+							  <option value="2">Two</option>
+							  <option value="3">Three</option>
+							</select>
+						   	</div>
+						   	<div class="form-group col-lg-4 col-xl-3">
+								<label>Мiсце навчання</label>
+								<input type="text" name="education-place" class="form-control">
+							</div>
+							<div class="form-group col-lg-4 col-xl-3">
+								<label>Коли отримав</label>
+								<input type="date" name="education-graduate-date" class="form-control">
+							</div>
+					    </div>
+					   	
+				  	</fieldset>
+				  	<hr>
+				  	<fieldset class="form-group">
+					    <legend>Структурний пiдроздiл/Посада</legend>
+					    <div class="row">
+					    	<div class="form-group col-lg-4 col-xl-3">
+						   		<label>Структурний пiдроздiл</label><br>
+						   		<select class="custom-select" name="structul-sub">
+								  <option selected>Open this select menu</option>
+								  <option value="1">One</option>
+								  <option value="2">Two</option>
+								  <option value="3">Three</option>
+								</select>
+						   	</div>
+
+						   	<div class="form-group col-lg-4 col-xl-3">
+						   		<label>Кафедра</label><br>
+						   		<select class="custom-select" name="cathedra">
+								  <option selected>Open this select menu</option>
+								  <option value="1">One</option>
+								  <option value="2">Two</option>
+								  <option value="3">Three</option>
+								</select>
+						   	</div>
+
+						   	<div class="form-group col-lg-4 col-xl-3">
+						   		<label>Назва посади</label><br>
+						   		<select class="custom-select" name="cathedra-rank">
+								  <option selected>Open this select menu</option>
+								  <option value="1">One</option>
+								  <option value="2">Two</option>
+								  <option value="3">Three</option>
+								</select>
+						   	</div>
+
+						   	<div class="form-group col-lg-4 col-xl-3">
+								<label>З якого року на посадi</label>
+								<input type="date" name="cathedra-date-start" class="form-control">
+							</div>
+					    </div>
+					   	<hr>
+				  	</fieldset>
+				  	
+				  
+
+				  	<div class="clearfix">
+				  		<a href="#" class="btn btn-success float-right">Добавити спiвробiтника</a>
+				  	</div>
+				  	
+				</form>
+				
+				
+			</div>
+		</div>
+		
+	</section>
+	<script src="js/libs.min.js"></script>
+	<script>
+
+		$('input[type=checkbox]').change( function() {
+
+			if(!this.classList.contains("dinamic")){
+				return;
+			}
+
+			if($('.' + this.id)[0].classList.contains("invisible")){
+
+				$('.' + this.id)[0].classList.remove("invisible");
+
+			} else {
+
+				$('.' + this.id)[0].classList.add("invisible");
+
+			}
+
+		});
+	</script>
+</body>
+</html>
